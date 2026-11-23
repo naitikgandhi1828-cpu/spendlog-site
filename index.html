@@ -1,10 +1,70 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SpendLog</title>
-<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;line-height:1.6;color:#1c1c1e}h1{color:#F26722}a{color:#0066B3}</style></head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SpendLog – your spending, logged by itself</title>
+<meta name="description" content="SpendLog is a free Android app that logs your card payments, transfers and bills from your bank's alert emails and messages, with charts and a morning summary. Everything stays on your phone.">
+<style>
+  :root{--v:#6C4DF6;--p:#E5489D;--ink:#16142B;--sub:#5d5a75;--bg:#F4F3FB}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  header{background:linear-gradient(135deg,var(--v),#9B4DDB 55%,var(--p));color:#fff;padding:56px 20px 64px}
+  .wrap{max-width:880px;margin:0 auto}
+  h1{font-size:44px;line-height:1.1;margin:0 0 12px;font-weight:800;letter-spacing:-1px}
+  header p{font-size:19px;max-width:600px;opacity:.95;margin:0 0 26px}
+  .btn{display:inline-block;background:#fff;color:var(--v);font-weight:700;padding:14px 22px;border-radius:14px;text-decoration:none}
+  .btn.ghost{background:rgba(255,255,255,.18);color:#fff;margin-left:8px}
+  main{padding:40px 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .card{background:#fff;border-radius:20px;padding:22px;box-shadow:0 6px 24px rgba(108,77,246,.10)}
+  .card h3{margin:10px 0 6px;font-size:18px}
+  .card p{margin:0;color:var(--sub)}
+  .dot{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px}
+  h2{font-size:28px;margin:44px 0 14px}
+  ol li{margin-bottom:8px}
+  .note{background:#fff;border-left:5px solid var(--v);border-radius:14px;padding:16px 20px;color:var(--sub)}
+  footer{padding:30px 20px 50px;color:var(--sub);font-size:14px}
+  footer a,main a{color:var(--v)}
+</style>
+</head>
 <body>
-<h1>SpendLog</h1>
-<p>SpendLog is a personal iPhone app that keeps a log of your own bank, card and pay-later transactions, EMIs and card bills.</p>
-<p>Everything is stored on your iPhone. If you choose, SpendLog can save a backup file to your own Google Drive.</p>
-<p><a href="privacy.html">Privacy policy</a></p>
-</body></html>
+<header>
+  <div class="wrap">
+    <h1>SpendLog</h1>
+    <p>Every card payment, transfer and bill logged by itself, from your bank's alert emails and messages. Colourful charts, a summary every morning, and nothing leaves your phone.</p>
+    <a class="btn" href="#get">Get the app</a><a class="btn ghost" href="privacy.html">Privacy policy</a>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <div class="grid">
+      <div class="card"><div class="dot" style="background:#6C4DF6">✉</div><h3>Reads bank alerts</h3><p>Sign in with Google once. SpendLog finds your bank's alert emails (read-only) and logs each payment, with amount, shop and card.</p></div>
+      <div class="card"><div class="dot" style="background:#E5489D">◔</div><h3>Charts that make sense</h3><p>Day-by-day bars, a ring of categories and your last six months side by side.</p></div>
+      <div class="card"><div class="dot" style="background:#14B8A6">☀</div><h3>Morning summary</h3><p>Each morning a notification says what you spent yesterday and where it went.</p></div>
+      <div class="card"><div class="dot" style="background:#FF8A3D">⧉</div><h3>No duplicates</h3><p>The same payment told by SMS and email is counted once – checked again every time your phone comes back online.</p></div>
+      <div class="card"><div class="dot" style="background:#3B82F6">⟳</div><h3>EMIs and card bills</h3><p>Instalment plans, pay-later and statement cycles, with reminders before they are due.</p></div>
+      <div class="card"><div class="dot" style="background:#10B981">🔒</div><h3>Private by design</h3><p>No SpendLog server and no account with us. Your data stays on your phone; backups go to your own Google Drive.</p></div>
+    </div>
+
+    <h2 id="how">How it works</h2>
+    <ol>
+      <li>Open SpendLog and tap <b>Continue with Google</b>.</li>
+      <li>Choose your Google account and allow <b>read-only Gmail</b> (to find bank alert emails) and <b>SpendLog's own Drive folder</b> (for backups).</li>
+      <li>That's it. Past alerts are read straight away and new ones are logged as they arrive.</li>
+    </ol>
+
+    <h2>How SpendLog uses your Google data</h2>
+    <div class="note">
+      <p>SpendLog reads only emails from bank and payment senders (for example your bank's alert address), on your phone, to create entries in your spending log. It cannot change, send or delete any email. It creates and reads only its own backup files in your Google Drive. Your Google data is never sent to SpendLog's developer or to anyone else, never used for advertising, and never sold. Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+
+    <h2 id="get">Get the app</h2>
+    <p>SpendLog for Android is in early access. To join, email <a href="mailto:naitikgandhi1828@gmail.com?subject=SpendLog%20early%20access">naitikgandhi1828@gmail.com</a> with the Gmail address you'll sign in with.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">SpendLog · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · Contact: <a href="mailto:naitikgandhi1828@gmail.com">naitikgandhi1828@gmail.com</a></div>
+</footer>
+</body>
+</html>
